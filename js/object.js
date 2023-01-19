@@ -1,45 +1,40 @@
 // My Object
 
-let earPods = [
-  {
-    brand: "Apple",
-    objectModel: "Airpods Pro",
-    generation: 2,
-    noiseCancelling: true,
-    ownerFirstName: "Marius",
-    ownerLastName: "Rundereim",
-  },
-];
+let earPods = {
+  brand: "Apple",
+  objectModel: "Airpods Pro",
+  generation: 2,
+  noiseCancelling: true,
+  ownerFirstName: "Marius",
+  ownerLastName: "Rundereim",
+};
 
 // Insert brand
 
 let objectBrand = document.querySelector(".brandName");
 
-if (earPods[0].brand === "Apple") {
+if (earPods.brand === "Apple") {
   objectBrand.innerHTML = "Apple";
 }
 
 // Insert model
 
 let earPodsModel = document.querySelector(".objectModel");
-
-for (let i = 0; i < earPods.length; i++) {
-  earPodsModel.innerHTML = earPods[i].objectModel;
-}
+earPodsModel.innerHTML = earPods.objectModel;
 
 // Insert details
 
 let listDetails = document.querySelector("ul");
 
-for (let i = 0; i < earPods.length; i++) {
-  // console.log("This is:", earPods[i].noiseCancelling);
+if (earPods.generation < 3) {
   listDetails.innerHTML +=
-    "<li>" + earPods[i].generation + ".generation" + "</li>";
-  if (earPods[i].noiseCancelling === true) {
-    listDetails.innerHTML += "<li>" + "Noisecancelling" + "</li>";
-  } else {
-    listDetails.innerHTML += "<li>" + "Not noisecancelling" + "</li>";
-  }
+    "<li>" + earPods.generation + ".generation" + "</li>";
+}
+
+if (earPods.noiseCancelling === true) {
+  listDetails.innerHTML += "<li>" + "Noisecancelling" + "</li>";
+} else {
+  listDetails.innerHTML += "<li>" + "Not noisecancelling" + "</li>";
 }
 
 // Change image
@@ -65,15 +60,13 @@ secondImageButton.onclick = function () {
 let findObject = document.querySelector(".findresult");
 let findObjectButton = document.querySelector(".findButton");
 
-for (let i = 0; i < earPods.length; i++) {
-  function thisFunction() {
-    findObject.innerHTML =
-      "<p>" +
-      "Airpods is inside on " +
-      earPods[i].ownerFirstName +
-      " pockets" +
-      "</p>";
-  }
-
-  findObjectButton.onclick = thisFunction;
+function thisFunction() {
+  findObject.innerHTML =
+    "<p>" +
+    "Airpods is inside on " +
+    earPods.ownerFirstName +
+    " pockets" +
+    "</p>";
 }
+
+findObjectButton.onclick = thisFunction;
