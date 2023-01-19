@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(209, 209, 209);
+  font-family: "Sofia Sans", sans-serif;
+}
+
+.container {
+  /*
+  width: min(100% - 5rem, 95em);
+  margin-inline: auto;
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: min(100% - 5rem, 95em);
+  margin-inline: auto;
+}
+
+.card-prop {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  border-radius: 140px;
+  filter: drop-shadow(0px 20px 40px rgba(39, 84, 69, 0.4));
+}
+
+.img-prop {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .flex {
+    flex-direction: column;
+  }
+}
+
+.object_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.button_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.findresult {
+  background: lightgreen;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+  border: 1px solid lightseagreen;
+}
