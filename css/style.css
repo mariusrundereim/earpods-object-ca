@@ -3,19 +3,24 @@
   box-sizing: border-box;
 }
 
+html,
 body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
   background: rgb(209, 209, 209);
   font-family: "Sofia Sans", sans-serif;
 }
 
 .container {
-  /*
+
   width: min(100% - 5rem, 95em);
   margin-inline: auto;
-  */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 
 .wrapper {
